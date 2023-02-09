@@ -1,0 +1,20 @@
+from bs4 import BeautifulSoup
+import requests
+import pandas as pd
+
+url = 'https://kinogo.film/'
+response = requests.get(url)
+soup = BeautifulSoup(response.text, "lxml")
+
+films = soup.findAll('div', class_='shortstory')
+data = []
+for film in films:
+    link = film.find('h2', class_='zagolovki').find('a').get('href')
+    name_of_film = film.find('h2', class_='zagolovki').find('a').text
+    data.append([link, name_of_film])
+
+print(data)
+
+header = ['link', 'name_of_film']
+df = pd.DataFrame(data, columns=header)
+df.to_csv('C:/Users/AZAMAT/Desktop/kinogo.csv', sep=';', encoding='utf8')
