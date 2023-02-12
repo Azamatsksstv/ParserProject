@@ -17,7 +17,7 @@ def create_table_items():
                             res_id int,
                             link text not null, 
                             title text not null, 
-                            content text,
+                            content text not null ,
                             nd_date int(11),
                             s_date int(11),
                             not_date date not null);''')
@@ -30,7 +30,7 @@ def insert_to_items(data):
     try:
         connection = sqlite3.connect('db.db')
         cursor = connection.cursor()
-        query = '''INSERT INTO items (res_id, link, title, nd_date, s_date, not_date) VALUES (?, ?, ?, ?, ?, ?)'''
+        query = '''INSERT INTO items (res_id, link, title, content, nd_date, s_date, not_date) VALUES (?, ?, ?, ?, ?, ?, ?)'''
         values = data
         cursor.executemany(query, values)
         connection.commit()
