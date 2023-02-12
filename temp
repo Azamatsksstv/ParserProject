@@ -79,3 +79,55 @@ for film in films:
 #     print(ex)
 
 
+
+///////////////
+from bs4 import BeautifulSoup
+import requests
+import queries
+import datetime
+import dateparser
+
+
+# url = 'https://www.nur.kz/society/'
+# response = requests.get(url)
+# soup = BeautifulSoup(response.text, "lxml")
+# films = soup.findAll('article', class_='block-infinite__item-content')
+# data = []
+
+
+def parse(url, response, soup, films, data):
+    for film in films:
+        link = film.find('a').get('href')  # это поле содержит ссылку на новость
+        title = film.find('h3').text.strip()  # это поле содержит заголовок новости.
+        datetime_from_website = film.find('time').text.strip()
+        timestamp = dateparser.parse(datetime_from_website)
+        nd_date = datetime.datetime.timestamp(
+            timestamp) * 1000  # это поле содержит дату и время новости в формате Unix time
+        current_time = datetime.datetime.now()
+        s_date = datetime.datetime.timestamp(
+            current_time) * 1000  # это поле содержит дату и время попадания новости в саму таблицу items в формате Unix time
+        not_date = timestamp.strftime("%Y-%m-%d")  # это поле содержит дату новости в формате Год-Месяц-День
+        data.append([link, title, nd_date, s_date, not_date])
+
+
+
+
+# for film in films:
+#     link = film.find('a').get('href')                           # это поле содержит ссылку на новость
+#     title = film.find('h3').text.strip()                        # это поле содержит заголовок новости.
+#     datetime_from_website = film.find('time').text.strip()
+#     timestamp = dateparser.parse(datetime_from_website)
+#     nd_date = datetime.datetime.timestamp(timestamp) * 1000     # это поле содержит дату и время новости в формате Unix time
+#     current_time = datetime.datetime.now()
+#     s_date = datetime.datetime.timestamp(current_time) * 1000   #  это поле содержит дату и время попадания новости в саму таблицу items в формате Unix time
+#     not_date = timestamp.strftime("%Y-%m-%d")                   # это поле содержит дату новости в формате Год-Месяц-День
+#     data.append([link, title, nd_date, s_date, not_date])
+
+
+# queries.drop_table_items()
+# queries.create_table_items()
+# queries.insert_to_items(data)
+
+queries.drop_table_resource()
+queries.create_table_resource()
+

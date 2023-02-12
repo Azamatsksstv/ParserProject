@@ -14,3 +14,5 @@ requests==2.28.2
 six==1.16.0
 soupsieve==2.3.2.post1
 urllib3==1.26.14
+
+dateparser~=1.1.7
