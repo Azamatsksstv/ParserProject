@@ -1,5 +1,5 @@
 В проекте использовал:
 Python, библиотеки dateparser, datetime, queries, requests, BeautifulSoup, sqlite3.
 ******
-Requirements и инструкции по которому выполнен мой проект:
-https://docs.google.com/document/d/1l1WZAbCZdOspjCSqyrg9BHIHrRUc6hiZPjRIidq1PII/edit#heading=h.bb7we7n3x7gl
+https://github.com/Azamatsksstv/ParserProject/blob/main/Readme%20ParserProject.pdf
+перейдите по ссылке для получения подробной информации о проекте
