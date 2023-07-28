@@ -1,5 +1,3 @@
-Это мой проект по курсу python разработки.
-****
 В проекте использовал:
 Python, библиотеки dateparser, datetime, queries, requests, BeautifulSoup, sqlite3.
 ******
