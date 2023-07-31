@@ -11,17 +11,13 @@
 <pre>
 ```bash
 git clone https://github.com/Azamatsksstv/ParserProject
-```
+</pre>
 
 Создайте виртуальное окружение и активируйте его:
+<pre>
 ```bash
 python -m venv venv
 source venv/bin/activate  # для Windows: venv\Scripts\activate
-```
-</pre>
-
-
-
 
 Установите зависимости из файла requirements.txt:
     pip install -r requirements.txt
