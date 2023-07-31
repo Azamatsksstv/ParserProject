@@ -8,13 +8,20 @@
 ## Установка и настройка
 
 1. Клонируйте репозиторий на ваш компьютер:
-
-    git clone https://github.com/Azamatsksstv/ParserProject
-
+<pre>
+```bash
+git clone https://github.com/Azamatsksstv/ParserProject
+```
 
 Создайте виртуальное окружение и активируйте его:
-    python -m venv venv
-    source venv/bin/activate  # для Windows: venv\Scripts\activate
+```bash
+python -m venv venv
+source venv/bin/activate  # для Windows: venv\Scripts\activate
+```
+</pre>
+
+
+
 
 Установите зависимости из файла requirements.txt:
     pip install -r requirements.txt
