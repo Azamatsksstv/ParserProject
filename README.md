@@ -11,7 +11,7 @@
 
 ```bash
 git clone https://github.com/Azamatsksstv/ParserProject
-```bash
+'''bash
 
 
 Создайте виртуальное окружение и активируйте его:
