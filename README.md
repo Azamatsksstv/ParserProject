@@ -9,21 +9,15 @@
 
 1. Клонируйте репозиторий на ваш компьютер:
 
-```bash
-git clone https://github.com/Azamatsksstv/ParserProject
-'''bash
+    git clone https://github.com/Azamatsksstv/ParserProject
 
 
 Создайте виртуальное окружение и активируйте его:
-```bash
-python -m venv venv
-source venv/bin/activate  # для Windows: venv\Scripts\activate
-```bash
+    python -m venv venv
+    source venv/bin/activate  # для Windows: venv\Scripts\activate
 
 Установите зависимости из файла requirements.txt:
-```bash
-pip install -r requirements.txt
-```bash
+    pip install -r requirements.txt
 
 Создайте базу данных db.db и таблицы items и resource:
 
